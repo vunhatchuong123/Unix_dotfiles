@@ -16,19 +16,20 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 
 ---
 
-| name             | Description            | Notes |
-| ---------------- | ---------------------- | ----- |
-| Qlite            | Tiling Windows Manager |       |
-| Firefox          |                        |       |
-| Lightdm          |                        |       |
-| Tmux             |                        |       |
-| Alacritty        |                        |       |
-| Neovim, Lunarvim |                        |       |
-| Picom            |                        |       |
-| ZSH              |                        | ohmyzsh, spaceship prompt      |
-| Launcher         | rofi                   |       |
-| Theme            | Catppuccin             |       |
-| Font             | JetBrainsMono          |       |
+| name             | Description            | Notes                     |
+| ---------------- | ---------------------- | ------------------------- |
+| Qlite            | Tiling Windows Manager | Scratchpad                |
+| Firefox          |                        |                           |
+| Lightdm          |                        |                           |
+| Tmux             |                        |                           |
+| Alacritty        |                        |                           |
+| Neovim, Lunarvim |                        |                           |
+| Picom            |                        |                           |
+| ZSH              |                        | ohmyzsh, spaceship prompt |
+| Launcher         | rofi                   |                           |
+| Theme            | Catppuccin             |                           |
+| Font             | JetBrainsMono          |                           |
+| Timeshift        | Snapshot backup        |                           |
 
 ## Qlite
 
