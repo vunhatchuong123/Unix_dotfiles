@@ -8,7 +8,7 @@
 
 - [ ] Alacritty
 - [ ] Tmux
-- [ ] Zsh, Oh My Posh
+- [ ] Zsh, Oh My zsh, starship
 - [ ] Lunarvim
 
 ## Setup
