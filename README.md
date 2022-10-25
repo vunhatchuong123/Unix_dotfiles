@@ -36,6 +36,10 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | Pacstall         | AUR for Ubuntu         |                           |
 | Pasystray        | System tray icon       |                           |
 | bottom           | Kinda like htop        |                           |
+| lxappearanc      | GUI for changin theme  |                           |
+| nitrogen         | Theme chooser          |                           |
+| dunst            | custom  notify         |                           |
+| rofi             | Launcher               |                           |
 
 ## Theme
 
