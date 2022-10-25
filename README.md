@@ -18,7 +18,7 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 
 | name             | Description            | Notes                     |
 | ---------------- | ---------------------- | ------------------------- |
-| Qlite            | Tiling Windows Manager | Scratchpad                |
+| Qtile            | Tiling Windows Manager | Scratchpad                |
 | Firefox          |                        |                           |
 | Lightdm          |                        |                           |
 | Tmux             |                        |                           |
@@ -30,10 +30,25 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | Theme            | Catppuccin             |                           |
 | Font             | JetBrainsMono          |                           |
 | Timeshift        | Snapshot backup        |                           |
+| Ranger           | Terminal file manager  |                           |
+| bleachBit        | Cleaner                |                           |
+| Ranger           | Terminal file manager  |                           |
+| Pacstall         | AUR for Ubuntu         |                           |
+| Pasystray        | System tray icon       |                           |
+| bottom           | Kinda like htop        |                           |
 
-## Qlite
+## Theme
 
 ---
+
+https://github.com/Jubijub/arch-config/wiki/6.Desktop-environment#install-qtile-1
+
+
+## Qtile
+
+---
+
+Qtile-extras, qtile-git
 
 ## Neovim
 

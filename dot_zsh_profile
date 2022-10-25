@@ -5,3 +5,5 @@ export PATH="$HOME/bin:$PATH"
 VIM="nvim"
 
 bindkey -s ^f "tmux-sessionizer\n"
+
+neofetch
