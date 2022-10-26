@@ -40,6 +40,7 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | nitrogen         | Theme chooser          |                           |
 | dunst            | custom  notify         |                           |
 | rofi             | Launcher               |                           |
+| imwheel          | MWheel Settings        |                           |
 
 ## Theme
 

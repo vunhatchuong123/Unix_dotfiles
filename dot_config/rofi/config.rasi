@@ -1,6 +1,6 @@
 configuration{
   font: "JetBrainsMono Nerd Font 12";
-  modi: "run,drun,window";
+  modi: "run,drun,window,power-menu:~/.config/rofi/rofi-power-menu ";
   icon-theme: "Papirus-Dark";
   show-icons: true;
   terminal: "alacritty";
@@ -10,6 +10,7 @@ configuration{
   hide-scrollbar: true;
   display-drun: "   Apps ";
   display-run: "   Run ";
+  display-power: "   Power";
   display-window: " 﩯  Window";
   display-Network: " 󰤨  Network";
   sidebar-mode: true;
