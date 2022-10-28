@@ -13,8 +13,8 @@ screens = [
             size=24,
             margin=[5, 5, 0, 5],
         ),
-        wallpaper=wallpaper_path + "beyond_the_clouds_v01.png",
-        wallpaper_mode="fill"
+#        wallpaper=wallpaper_path + "beyond_the_clouds_v01.png",
+#        wallpaper_mode="fill"
     ),
     Screen(
         top=bar.Bar(
@@ -22,7 +22,7 @@ screens = [
             size=24,
             margin=[5, 5, 0, 5],
         ),
-        wallpaper=wallpaper_path + "beyond_the_clouds_v01.png",
-        wallpaper_mode="fill"
+#        wallpaper=wallpaper_path + "beyond_the_clouds_v01.png",
+#        wallpaper_mode="fill"
     ),
 ]

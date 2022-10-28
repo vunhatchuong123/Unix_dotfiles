@@ -60,12 +60,12 @@ def init_bar_widgets(primary=True):
     widgets = [
         widget.Sep(linewidth=0, padding=10, background=colors["flamingo"]),
         widget.TextBox(
-            text="",
+            text="",
             mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
             foreground=colors["crust"],
             background=colors["flamingo"],
             padding=8,
-            fontsize=18,
+            fontsize=28,
             **powerline_arrow_left
         ),
         widget.Sep(linewidth=0, padding=8, background=colors["crust"]),
@@ -110,23 +110,51 @@ def init_bar_widgets(primary=True):
             padding=8,
             **powerline_arrow_left
         ),
+        widget.CheckUpdates(
+            update_interval=1800,
+            distro="Ubuntu",
+            display_format="{updates} Updates",
+
+            foreground=colors["blue"],
+   #             # background=colors["base"],
+   #             background=["#FFFFFF"],
+            mouse_callbacks= {
+                'Button1':
+                lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
+                },
+            #background="#2f343f"),
+
+            background=colors["red"]),
+            #background=["#FFFFFF"]),
+
         widget.Spacer(background=colors["crust"], **powerline_arrow_right),
         widget.Clock(
             foreground=colors["crust"],
             background=colors["flamingo"],
             padding=8,
-            format="%Y-%m-%d %H:%M",
+            format="%Y-%d-%m %H:%M",
         ),
+        widget.TextBox(
+            text='',
+            mouse_callbacks= {
+                'Button1':
+                lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
+                },
+            background=colors["flamingo"],
+            foreground=colors["crust"],
+            padding=20,
+                )
     ]
-    if primary:
-        widgets.insert(
-            -1,
-            widget.Systray(
-                foreground=colors["blue"],
-                # background=colors["base"],
-                background=["#FFFFFF"],
-                padding=2,
-                **powerline_arrow_right
-            ),
-        )
+   # if primary:
+   #     widgets.insert(
+   #         -1,
+   #        Pavucontrol
+   #         widget.Systray(
+   #             foreground=colors["blue"],
+   #             # background=colors["base"],
+   #             background=["#FFFFFF"],
+   #             padding=2,
+   #             **powerline_arrow_right
+   #         ),
+   #     )
     return widgets

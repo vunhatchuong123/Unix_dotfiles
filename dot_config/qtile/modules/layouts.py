@@ -1,4 +1,3 @@
-import os
 from libqtile import layout
 from libqtile.config import Match
 from .widgets import colors

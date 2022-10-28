@@ -1,12 +1,14 @@
-import os
-from libqtile.config import Key, Group
-from libqtile.command import lazy
+from libqtile.config import Group, Match
 from .keys import keys, mod
 
 # Group configuration
 groups = [
-    Group("Dev", layout="monadtall", label=""),
+    Group("Web", layout="monadtall", label=" "
+            matches = [Match(wm_class=["Firefox"])]),
     Group("Files", layout="monadtall", label=""),
-    Group("Web", layout="floating", label="爵"),
-    Group("System", layout="monadtall", label=""),
+    Group("Dev", layout="monadtall", label="",
+            matches = [Match(wm_class=["Alacritty"])]),
+    Group("Discord", layout="monadtall", label="ﭮ",
+            matches = [Match(wm_class=["discord"])]),
+    Group("System", layout="monadtall", label=""),
 ]
