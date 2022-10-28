@@ -145,16 +145,15 @@ def init_bar_widgets(primary=True):
             padding=20,
                 )
     ]
-   # if primary:
-   #     widgets.insert(
-   #         -1,
-   #        Pavucontrol
-   #         widget.Systray(
-   #             foreground=colors["blue"],
-   #             # background=colors["base"],
-   #             background=["#FFFFFF"],
-   #             padding=2,
-   #             **powerline_arrow_right
-   #         ),
-   #     )
+    if primary:
+        widgets.insert(
+            -2,
+            widget.Systray(
+                foreground=colors["blue"],
+                # background=colors["base"],
+                background=["#FFFFFF"],
+                padding=2,
+                **powerline_arrow_right
+            ),
+        )
     return widgets

@@ -3,7 +3,7 @@ from .keys import keys, mod
 
 # Group configuration
 groups = [
-    Group("Web", layout="monadtall", label=" "
+    Group("Web", layout="monadtall", label=" ",
             matches = [Match(wm_class=["Firefox"])]),
     Group("Files", layout="monadtall", label=""),
     Group("Dev", layout="monadtall", label="",
