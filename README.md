@@ -41,6 +41,8 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | dunst            | custom  notify         |                           |
 | rofi             | Launcher               |                           |
 | imwheel          | MWheel Settings        |                           |
+| alsa-utils       | Change audio w/ cmds   | Required for media keys   |
+| playerctl        | Chang track w/ cmds    | Required for media keys   |
 
 ## Theme
 
