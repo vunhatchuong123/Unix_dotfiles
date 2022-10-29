@@ -12,7 +12,7 @@ keys = [
         desc="Reload the config"),
     Key([mod, "control"], "q",
         lazy.shutdown(),
-        desc="Logout"),
+        desc="Restart Qtile"),
     Key(
         [mod, "control", "shift"], "q",
         lazy.spawn("systemctl poweroff"),
@@ -40,7 +40,9 @@ keys = [
     Key([mod], "space",
         lazy.layout.next(),
         desc="Move window focus to other window"),
-    #Key([mod], "Tab", lazy.spawn("rofi -show window"), desc="Rofi window switcher"),
+    #Key([mod], "Tab",
+    #lazy.spawn("rofi -show window"),
+    #desc="Rofi window switcher"),
     Key([mod, "shift"], "period",
         lazy.next_screen(),
         desc="Focus to next monitor"),
@@ -140,4 +142,9 @@ keys = [
     Key([], "XF86AudioLowerVolume",
         lazy.spawn("amixer -D default sset Master 2%- unmute"),
         desc="Volume Down"),
+
+    # Scratch pad
+    
+    #Key([mod], "c", lazy.group['scratchpad'].dropdown_toggle('ranger')),
+
 ]

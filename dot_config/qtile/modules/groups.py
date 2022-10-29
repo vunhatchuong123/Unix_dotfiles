@@ -1,5 +1,5 @@
-from libqtile.config import Group, Match
-from .keys import keys, mod
+from libqtile.config import Group, Match, ScratchPad, DropDown
+from .keys import terminal
 
 # Group configuration
 groups = [

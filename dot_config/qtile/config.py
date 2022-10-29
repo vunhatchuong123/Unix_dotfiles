@@ -5,6 +5,7 @@ from modules.layouts import layouts, floating_layout
 from modules.mouse import mouse
 from modules.hooks import *
 from modules.screens import screens
+from modules.scratchpad import *
 from libqtile.dgroups import simple_key_binder
 
 # Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
