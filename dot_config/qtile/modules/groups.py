@@ -4,7 +4,7 @@ from .keys import terminal
 # Group configuration
 groups = [
     Group("Web", layout="monadtall", label=" ",
-            matches = [Match(wm_class=["Firefox"])]),
+            matches = [Match(wm_class=["firefox"])]),
     Group("Files", layout="monadtall", label=""),
     Group("Dev", layout="monadtall", label="",
             matches = [Match(wm_class=["Alacritty"])]),

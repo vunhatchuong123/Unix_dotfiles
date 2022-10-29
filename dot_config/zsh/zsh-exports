@@ -1,9 +1,9 @@
+#!/bin/bash
+
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-VIM="nvim"
-
-bindkey -s ^f "tmux-sessionizer\n"
-
-neofetch
+# Start starship prompt and zoxide
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"

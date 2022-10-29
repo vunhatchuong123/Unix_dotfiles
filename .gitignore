@@ -1,4 +1,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-.dot_config/qtile/modules/__pycache__
+dot_config/qtile/modules/__pycache__
+*dot_zcompdump*
+dot_config/zsh/plugins

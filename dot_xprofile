@@ -1,3 +1,12 @@
 xset r rate 150 50
+
+# Set monitors resolution
 xrandr --output DP-4 --primary --mode 2560x1440
 xrandr --output HDMI-0 --mode 1920x1080 --right-of DP-4
+
+# Disable CapsLock
+#xmodmap -e "remove lock = Caps_Lock"
+setxkbmap -option caps:none
+
+# Move zsh to .config
+export ZDOTDIR=$HOME/.config/zsh
