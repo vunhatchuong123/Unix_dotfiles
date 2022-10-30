@@ -25,12 +25,6 @@ keys = [
     ),
 
     # Change focus
-    Key([mod], "h",
-        lazy.layout.left(),
-        desc="Move focus to left"),
-    Key([mod], "l",
-        lazy.layout.right(),
-        desc="Move focus to right"),
     Key([mod], "j",
         lazy.layout.down(),
         desc="Move focus down"),
@@ -43,7 +37,7 @@ keys = [
     #Key([mod], "Tab",
     #lazy.spawn("rofi -show window"),
     #desc="Rofi window switcher"),
-    Key([mod, "shift"], "period",
+    Key([mod], "period",
         lazy.next_screen(),
         desc="Focus to next monitor"),
 
@@ -51,6 +45,15 @@ keys = [
     Key([mod], "Tab",
         lazy.next_layout(),
         desc="Toggle between layouts"),
+    Key([mod, "shift"], "Tab",
+        lazy.layout.rotate(),
+        lazy.layout.flip(),
+        desc='Switch which side main pane occupies (XmonadTall)'
+        ),
+    Key([mod, "shift"], "f",
+        lazy.window.toggle_floating(),
+        desc='toggle floating'
+        ),
 
     # Move windows
     Key(
@@ -71,30 +74,29 @@ keys = [
         desc="Move window up"),
 
     # Resize windows
-    Key([mod, "control"], "h",
-        lazy.layout.grow_left(),
-        desc="Grow window to the left"),
-    Key([mod, "control"], "l",
-        lazy.layout.grow_right(),
-        desc="Grow window to the right"),
-    Key([mod, "control"], "j",
-        lazy.layout.grow_down(),
-        desc="Grow window down"),
-    Key([mod, "control"], "k",
-        lazy.layout.grow_up(),
-        desc="Grow window up"),
-    Key([mod], "i",
-        lazy.layout.grow(),
-        desc="grow focused window at the expense of other columns"),
-    Key([mod], "m",
+#    Key([mod, "control"], "h",
+#        lazy.layout.grow_left(),
+#        desc="Grow window to the left"),
+#    Key([mod, "control"], "l",
+#        lazy.layout.grow_right(),
+#        desc="Grow window to the right"),
+#    Key([mod, "control"], "j",
+#        lazy.layout.grow_down(),
+#        desc="Grow window down"),
+#    Key([mod, "control"], "k",
+#        lazy.layout.grow_up(),
+#        desc="Grow window up"),
+    Key([mod], "h",
         lazy.layout.shrink(),
-        desc="shrink focused window while growing other columns"),
+        desc='Shrink window (MonadTall), decrease number in master pane (Tile)'
+        ),
+    Key([mod], "l",
+        lazy.layout.grow(),
+        desc='Expand window (MonadTall), increase number in master pane (Tile)'
+        ),
     Key([mod], "n",
-        lazy.layout.normalize(),
+        lazy.layout.reset(),
         desc="Reset all window sizes"),
-    Key([mod], "o",
-        lazy.layout.maximize(),
-        desc="Makes focused window take maximum size"),
     Key([mod, "shift"], "space",
         lazy.layout.flip(),
         desc="Flips the main and secondary areas"),
@@ -112,6 +114,8 @@ keys = [
    #     lazy.spawn("rofi -show drun"),
    #     desc="Launch Rofi in combined mode",
    # ),
+   
+   #App Launcher
     Key([mod], "Return",
         lazy.spawn("alacritty"),
         desc="Launch terminal"),
@@ -127,24 +131,20 @@ keys = [
 
     # Media keys
     Key([], "XF86AudioMute",
-        lazy.spawn("amixer -q set Master toggle"),
+        lazy.spawn("media-notify mute"),
         desc="Mute, unmute audio"),
     Key([], "XF86AudioNext",
-        lazy.spawn("playerctl next"),
+        lazy.spawn("media-notify next"),
         desc="Next Track"),
     Key([], "XF86AudioPrev",
-        lazy.spawn("playerctl previous"), desc="Previous Track"),
+        lazy.spawn("media-notify previous"), desc="Previous Track"),
     Key([], "XF86AudioPlay",
-        lazy.spawn("playerctl play-pause"), desc="Play/Pause Track"),
+        lazy.spawn("media-notify play"), desc="Play/Pause Track"),
     Key([], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer -D default sset Master 2%+ unmute"),
+        lazy.spawn("media-notify up"),
         desc="Volume Up"),
     Key([], "XF86AudioLowerVolume",
-        lazy.spawn("amixer -D default sset Master 2%- unmute"),
+        lazy.spawn("media-notify down"),
         desc="Volume Down"),
-
-    # Scratch pad
-    
-    #Key([mod], "c", lazy.group['scratchpad'].dropdown_toggle('ranger')),
-
 ]
+

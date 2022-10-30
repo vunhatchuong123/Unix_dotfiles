@@ -232,6 +232,10 @@
     timeout = 0
     icon = ~/.local/share/icons/CatppuccinIcon.svg
 
+[history-ignore]
+    appname = "media-notify"
+    history_ignore = yes
+
 [Spotify]
     appname = Spotify
     format = "<b>%s</b>\n%b"

@@ -1,8 +1,10 @@
 #!/bin/bash
 
+msgTag="mediastate"
+
 function send_notification() {
   volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
-	dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" "Volume: ${volume}" -t 2000
+	dunstify -a "changevolume" -u low -h string:x-dunst-stack-tag:$msgTag -h int:value:"$volume" "Volume: ${volume}" -t 2000
 }
 
 case $1 in
@@ -18,7 +20,7 @@ down)
 mute)
   amixer -q set Master toggle
   if [ "$(awk -F"[][]" '/Left:/ { print $4 }' <(amixer sget Master))" == "off" ]; then
-		dunstify -a "changevolume" -u low -r 9993 "Muted" -t 2000  
+		dunstify -a "changevolume" -u low -h string:x-dunst-stack-tag:$msgTag "Muted" -t 2000  
 	else
 		send_notification up
 	fi
@@ -28,15 +30,15 @@ play)
   if [ "$(playerctl status)" == "Playing" ]; then
 		send_notification up
 	else
-		dunstify -a "changevolume" -u low -r 9993 "Muted" -t 2000  
+		dunstify -a "changevolume" -u low -h string:x-dunst-stack-tag:$msgTag "Muted" -t 2000  
 	fi
   ;;
 next)
   playerctl next
-	dunstify -a "changevolume" -u low -r 9993 "Next Track" -t 2000  
+	dunstify -a "changevolume" -u low --h string:x-dunst-stack-tag:$msgTag "Next Track" -t 2000  
 	;;
 previous)
   playerctl previous
-	dunstify -a "changevolume" -u low -r 9993 "Previous Track" -t 2000  
+	dunstify -a "changevolume" -u low -h string:x-dunst-stack-tag:$msgTag "Previous Track" -t 2000  
 	;;
 esac
