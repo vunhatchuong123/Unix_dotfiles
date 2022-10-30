@@ -11,7 +11,11 @@ alias la="ls --long --all --header --icons"
 alias fd="fdfind"
 alias less="less -R"
 
+alias cz="chezmoi"
 alias lg="lazygit"
+
+alias bat="batcat"
+alias cat="bat"
 
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'

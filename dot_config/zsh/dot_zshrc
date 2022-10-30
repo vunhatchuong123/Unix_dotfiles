@@ -50,6 +50,7 @@ source $ZSH/oh-my-zsh.sh
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-keymaps"
 zsh_add_file "zsh-aliases"
+source "$ZDOTDIR/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 #zsh_add_file "zsh-vim"
 # export MANPATH="/usr/local/man:$MANPATH"
 

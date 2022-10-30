@@ -4,3 +4,5 @@ __pycache__/
 dot_config/qtile/modules/__pycache__
 *dot_zcompdump*
 dot_config/zsh/plugins
+
+dot_local/share/fonts/dot_uuid
