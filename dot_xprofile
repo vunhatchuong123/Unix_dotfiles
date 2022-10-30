@@ -10,3 +10,6 @@ setxkbmap -option caps:none
 
 # Move zsh to .config
 export ZDOTDIR=$HOME/.config/zsh
+
+# Start ibus to change keyboard language
+ibus-daemon -drxR

@@ -5,7 +5,7 @@ from qtile_extras import widget
 from qtile_extras.widget.decorations import PowerLineDecoration
 
 icons_path = os.path.expanduser("~") + "/.config/qtile/qtile_icons"
-
+CMD_DICT['popOS'] = '("sudo apt update",0)'
 # Theme configuration
 # Catppuccin Macchiato colors (https://github.com/catppuccin/catppuccin)
 colors = {
@@ -110,23 +110,30 @@ def init_bar_widgets(primary=True):
             padding=8,
             **powerline_arrow_left
         ),
+        widget.TextBox(
+            text=' ',
+            background="#e0def4",
+            foreground="#191724",
+            padding=2
+        ),
         widget.CheckUpdates(
             update_interval=1800,
-            distro="Ubuntu",
+            distro="popOS",
             display_format="{updates} Updates",
-
-            foreground=colors["blue"],
-   #             # background=colors["base"],
-   #             background=["#FFFFFF"],
+            colour_have_updates="#191724",
             mouse_callbacks= {
                 'Button1':
                 lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
                 },
-            #background="#2f343f"),
-
-            background=colors["red"]),
-            #background=["#FFFFFF"]),
-
+            background="#e0def8"
+        ),
+        widget.TextBox(
+            text='',
+            background="#e0def4",
+            foreground="#ea9a97",
+            padding=-3,
+            fontsize=38
+        ),
         widget.Spacer(background=colors["crust"], **powerline_arrow_right),
         widget.Clock(
             foreground=colors["crust"],

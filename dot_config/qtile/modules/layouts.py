@@ -4,7 +4,7 @@ from .widgets import colors
 
 
 base_layout_theme = {
-    "border_width": 2,
+    "border_width": 4,
     "border_focus": colors["blue"],
     "border_normal": colors["overlay0"],
 }
