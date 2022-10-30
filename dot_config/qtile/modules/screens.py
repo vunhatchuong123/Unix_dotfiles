@@ -10,17 +10,20 @@ screens = [
     Screen(
         top=bar.Bar(
             widgets=init_bar_widgets(),
-            size=24,
+            size=30,
             margin=[5, 5, 0, 5],
+            background  = colors["base"]
         ),
+
 #        wallpaper=wallpaper_path + "beyond_the_clouds_v01.png",
 #        wallpaper_mode="fill"
     ),
     Screen(
         top=bar.Bar(
             widgets=init_bar_widgets(primary=False),
-            size=24,
+            size=30,
             margin=[5, 5, 0, 5],
+        background  = colors["base"]
         ),
 #        wallpaper=wallpaper_path + "beyond_the_clouds_v01.png",
 #        wallpaper_mode="fill"

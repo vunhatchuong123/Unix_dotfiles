@@ -48,6 +48,7 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | exa              | Colorful ls            |                           |
 | fd               | Better find cmd        | fd-find as app            |
 | ibus-bamboo      | Write in Vietnames     | Required Ibus             |
+| sxhkd            | Keyboard shorcuts      |                           |
 
 ## Theme
 
