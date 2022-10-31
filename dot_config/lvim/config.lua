@@ -52,11 +52,11 @@ vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.foldlevelstart = 99
--- lvim.transparent_window = true
+lvim.transparent_window = true
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "catppuccin"
+-- lvim.colorscheme = "catppuccin"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -97,7 +97,7 @@ lvim.builtin.telescope.defaults.mappings = {
 
 -- Change theme settings
 -- lvim.builtin.theme.options.dim_inactive = true
--- lvim.builtin.theme.options.style = "storm"
+-- lvim.builtin.theme.options.style = "mocha"
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
@@ -224,6 +224,13 @@ lvim.plugins = {
   },
   {
     "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+        require("catppuccin").setup {
+            flavour = "machiato" -- mocha, macchiato, frappe, latte
+        }
+        vim.api.nvim_command "colorscheme catppuccin"
+    end
   },
   {
     "tzachar/cmp-tabnine",
