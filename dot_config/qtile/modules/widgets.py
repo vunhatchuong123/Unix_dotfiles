@@ -1,6 +1,6 @@
 import os
 from libqtile import widget, qtile, bar
-import sys
+from .keys import terminal
 
 import colors
 
@@ -97,10 +97,11 @@ def init_bar_widgets(primary=True):
         ),
         widget.CheckUpdates(
             update_interval=1800,
+            distro = "Ubuntu",
             display_format = "{updates} Updates",
-            colour_have_updates="#191724",
+            colour_have_updates=colors["red"],
             no_update_string = 'No Updates',
-            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo apt update')},
+            mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e sudo apt upgrade')},
             foreground=colors["text"],
             background=colors["base"],
             padding=5,

@@ -21,6 +21,10 @@ groups.append(ScratchPad("scratchpad", [
              y=y_position,
              opacity=opacity),
 
+    DropDown("chezmoi",
+             terminal + " -e 'chezmoi' cd ",
+             opacity=opacity),
+
 #	DropDown("music",
 #			terminal + " -e ncmpcpp",
 #            height=height,
@@ -32,7 +36,8 @@ groups.append(ScratchPad("scratchpad", [
 ]))
 
 keys.extend([
-    Key([mod], "i", lazy.group['scratchpad'].dropdown_toggle('term')),
+    Key([mod], "t", lazy.group['scratchpad'].dropdown_toggle('term')),
+    Key([mod], "i", lazy.group['scratchpad'].dropdown_toggle('chezmoi')),
     Key([mod], "c", lazy.group['scratchpad'].dropdown_toggle('ranger')),
 
 ])
