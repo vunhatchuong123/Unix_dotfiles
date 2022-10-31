@@ -33,7 +33,7 @@ def init_bar_widgets(primary=True):
         ),
         widget.TextBox(
             text="",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))},
             foreground=colors["pink"],
             margin=7,
             fontsize=28,
