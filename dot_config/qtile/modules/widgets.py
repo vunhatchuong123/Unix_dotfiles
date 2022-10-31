@@ -34,9 +34,9 @@ def init_bar_widgets(primary=True):
         widget.TextBox(
             text="",
             mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
-            foreground=colors["pink"],
+            foreground=colors["mauve"],
             margin=7,
-            fontsize=28,
+            fontsize=35,
         ),
         widget.Spacer(
             length = 20,
