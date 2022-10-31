@@ -52,6 +52,7 @@ vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.foldlevelstart = 99
+-- lvim.transparent_window = true
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
@@ -68,6 +69,9 @@ lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["c"] = "\"_c"
 lvim.keys.normal_mode["x"] = "\"_x"
+lvim.keys.normal_mode["<C-_>"] = "<Plug>(comment_toggle_linewise_current)"
+lvim.keys.visual_mode["<C-_>"] = "<Plug>(comment_toggle_linewise_visual)"
+lvim.keys.normal_mode["<leader>u"] = ":UndotreeToggle<CR>"
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -214,35 +218,80 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
-    {
-      "catppuccin/nvim",
-    },
-    {
-      "tzachar/cmp-tabnine",
-      run = "./install.sh",
-      requires = "hrsh7th/nvim-cmp",
-      event = "InsertEnter",
-    },
-    {
-      "iamcco/markdown-preview.nvim",
-      run = "cd app && npm install",
-      ft = "markdown",
-      config = function()
-        vim.g.mkdp_auto_start = 1
-      end,
-    },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  {
+    "catppuccin/nvim",
+  },
+  {
+    "tzachar/cmp-tabnine",
+    run = "./install.sh",
+    requires = "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
+  {
+    "andymass/vim-matchup",
+    event = "CursorMoved",
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  },
+  {
+    'jinh0/eyeliner.nvim',
+    config = function()
+      require'eyeliner'.setup {
+        highlight_on_key = true
+      }
+    end
+  },
+  {
+    "romgrk/nvim-treesitter-context",
+    config = function()
+      require("treesitter-context").setup{
+        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        throttle = true, -- Throttles plugin updates (may improve performance)
+        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+        patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+          -- For all filetypes
+          -- Note that setting an entry here replaces all other patterns for this entry.
+          -- By setting the 'default' entry below, you can control which nodes you want to
+          -- appear in the context window.
+          default = {
+            'class',
+            'function',
+            'method',
+          },
+        },
+      }
+    end
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+  {
+    "mbbill/undotree",
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.json", "*.jsonc" },
---   -- enable wrap mode for json files only
---   command = "setlocal wrap",
--- })
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.json", "*.jsonc" },
+  -- enable wrap mode for json files only
+  command = "setlocal wrap",
+})
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "zsh",
   callback = function()
@@ -250,10 +299,11 @@ vim.api.nvim_create_autocmd("FileType", {
     require("nvim-treesitter.highlight").attach(0, "bash")
   end,
 })
-vim.api.nvim_create_autocmd( "BufWinEnter" , {
+vim.api.nvim_create_autocmd("BufWinEnter", {
   group = "_general_settings",
   pattern = "*",
   callback = function()
     vim.cmd "normal zR"
-    end,
+  end,
 })
+

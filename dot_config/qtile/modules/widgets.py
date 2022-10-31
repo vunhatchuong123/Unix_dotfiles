@@ -89,9 +89,13 @@ def init_bar_widgets(primary=True):
             length = bar.STRETCH,
         ),
         # ----------------------------------------
-        widget.Spacer(
-            length = 16,
-        ), 
+
+        widget.Clock(
+            font        = "JetBrainsMono Nerd Font, Regular",
+            format="%A %d-%m-%Y %H:%M",
+            fontsize = 15,
+        ),
+        widget.Spacer(), 
         widget.TextBox(
             text=' ',
         ),
@@ -115,9 +119,6 @@ def init_bar_widgets(primary=True):
             margin    = 8,
             size      = 50,
         ),
-        widget.Spacer(
-            length = 16,
-        ),
         widget.PulseVolume(
             font        = "JetBrainsMono Nerd Font, Regular",
             foreground  = colors["blue"],
@@ -129,20 +130,11 @@ def init_bar_widgets(primary=True):
         ),
         widget.Spacer(
             length      =10,
-            background  = colors["surface0"]
         ), 
 # Systray actually on this line
-       widget.Spacer(
-            length      = 10,
-            background  = colors["surface0"]
-        ), 
         widget.Spacer(
-            length = 20,
+            length = 10,
         ),  
-        widget.Clock(
-            font        = "JetBrainsMono Nerd Font, Regular",
-            format="%Y-%d-%m %H:%M",
-        ),
         widget.Image(
             filename         = '~/.config/qtile/assets/bar/power.png',
             margin           = 8,
@@ -157,7 +149,7 @@ def init_bar_widgets(primary=True):
     ]
     if primary:
         widgets.insert(
-            -5,
+            -4,
             widget.Systray(
                 icon_size   = 24,
                 padding     = 0,

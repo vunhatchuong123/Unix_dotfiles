@@ -23,6 +23,7 @@ groups.append(ScratchPad("scratchpad", [
 
     DropDown("chezmoi",
              terminal + " -e 'chezmoi' cd ",
+             height=0.5,
              opacity=opacity),
 
 #	DropDown("music",
