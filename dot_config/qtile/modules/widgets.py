@@ -33,7 +33,7 @@ def init_bar_widgets(primary=True):
         ),
         widget.TextBox(
             text="",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
             foreground=colors["pink"],
             margin=7,
             fontsize=28,
@@ -145,7 +145,7 @@ def init_bar_widgets(primary=True):
             filename         = '~/.config/qtile/assets/bar/power.png',
             margin           = 8,
             mouse_callbacks  = {
-                'Button1': lambda: qtile.cmd_spawn('rofi -show power')
+                'Button1': lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
             }
         ),
         widget.Spacer(
