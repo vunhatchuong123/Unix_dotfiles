@@ -11,5 +11,7 @@ groups = [
             matches = [Match(wm_class=["Alacritty"])]),
     Group("Discord", layout="monadtall", label="ﭮ",
             matches = [Match(wm_class=["discord"])]),
+    Group("Code", layout="monadtall", label=" ",
+            matches = [Match(wm_class=["code"])]),
     Group("System", layout="monadtall", label="  "),
 ]

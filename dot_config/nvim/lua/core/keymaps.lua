@@ -22,6 +22,8 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<S-x>", "<cmd>BufferKill<CR>", opts)
+keymap("n", "c"    , "\"_c", opts)
+keymap("n", "x"    , "\"_x", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
