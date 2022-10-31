@@ -97,11 +97,12 @@ def init_bar_widgets(primary=True):
         ),
         widget.CheckUpdates(
             update_interval=1800,
-            display_format = "Updates: {updates} ",
+            display_format = "{updates} Updates",
             colour_have_updates="#191724",
+            no_update_string = 'No Updates',
             mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo apt update')},
-            background="#e0def4",
-            foreground="#191724",
+            foreground=colors["text"],
+            background=colors["base"],
             padding=5,
         ),
         widget.Spacer(
