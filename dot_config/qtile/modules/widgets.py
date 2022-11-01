@@ -100,7 +100,6 @@ def init_bar_widgets(primary=True):
             text=' ',
         ),
         widget.CheckUpdates(
-            update_interval=1800,
             distro = "Ubuntu",
             display_format = "{updates} Updates",
             colour_have_updates=colors["red"],
