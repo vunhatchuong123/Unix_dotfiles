@@ -19,3 +19,6 @@ nm-applet &
 imwheel -b "4 5"
 
 # xfce4-power-manager &
+
+# Keyboard shortcuts
+sxhkd &

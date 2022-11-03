@@ -67,6 +67,11 @@ source "$ZDOTDIR/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
+# Environment variables set everywhere
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+
 VIM="nvim"
 neofetch
 

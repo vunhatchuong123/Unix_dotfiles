@@ -107,7 +107,10 @@ keys = [
         desc="Kill focused window"),
     Key([mod], "r",
         lazy.spawn("rofi -show drun"),
-        desc="Spawn a command using a prompt widget"),
+        desc="Rofi app launcher"),
+    Key([mod, "control"], "Tab",
+        lazy.spawn("rofi -show window"),
+        desc="Rofi window switcher"),
    # Key(
    #     [mod, "shift"],
    #     "Return",

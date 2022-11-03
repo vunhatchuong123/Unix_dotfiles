@@ -1,0 +1,5 @@
+super + shift + s
+  flameshot gui
+
+super + shift + c
+  rofi -show calc
