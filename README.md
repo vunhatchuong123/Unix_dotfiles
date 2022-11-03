@@ -21,6 +21,7 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | Qtile            | Tiling Windows Manager | Scratchpad                |
 | Firefox          |                        |                           |
 | Lightdm          |                        |                           |
+| Lazygit          | Terminal Git UI        | Or use GitUI              |
 | Tmux             |                        |                           |
 | Alacritty        |                        |                           |
 | Neovim, Lunarvim |                        |                           |
