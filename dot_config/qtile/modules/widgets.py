@@ -62,8 +62,8 @@ def init_bar_widgets(primary=True):
             highlight_method="line",
             this_current_screen_border=colors["pink"],
             this_screen_border=colors["rosewater"],
-            other_screen_border="#000000",
-            other_current_screen_border="#000000",
+            other_screen_border=colors["surface0"],
+            other_current_screen_border=colors["surface0"],
         ),
         widget.TextBox(
             text = "",
