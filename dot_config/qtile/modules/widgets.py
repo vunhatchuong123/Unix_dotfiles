@@ -36,7 +36,7 @@ def init_bar_widgets(primary=True):
             mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("rofi -show drun")},
             foreground=colors["mauve"],
             margin=7,
-            fontsize=35,
+            fontsize=30,
         ),
         widget.TextBox(
             text = "",
@@ -48,10 +48,10 @@ def init_bar_widgets(primary=True):
        #     length = 20,
        # ),
         widget.GroupBox(
-            fontsize                    = 25,
+            fontsize                    = 23,
             margin_y                    = 3,
             margin_x                    = 5,
-            borderwidth                 = 1,
+            borderwidth                 = 2,
             font                        = "JetBrainsMono Nerd Font, Regular",
             active                      = colors["green"],
             block_highlight_text_color  = colors["red"],
@@ -60,8 +60,10 @@ def init_bar_widgets(primary=True):
             disable_drag                = True,
             highlight_color=colors["surface0"],
             highlight_method="line",
-            this_current_screen_border=colors["lavender"],
-            other_current_screen_border=colors["blue"],
+            this_current_screen_border=colors["pink"],
+            this_screen_border=colors["rosewater"],
+            other_screen_border="#000000",
+            other_current_screen_border="#000000",
         ),
         widget.TextBox(
             text = "",
@@ -102,9 +104,26 @@ def init_bar_widgets(primary=True):
         ),
         widget.Spacer(), 
         widget.TextBox(
-            text=' ',
+          text = '',
+          fontsize = 20,
+        ),
+        widget.DF(
+          fontsize = 15,
+          format = ' {f} GB  ',
+          partition = '/',
+          visible_on_warn = False,
+          warn_color = colors["red"],
+        ),
+        widget.Sep(
+          linewidth = 2,
+          background=colors["crust"],
+        ),
+        widget.TextBox(
+            text = '  ',
+            fontsize = 20,
         ),
         widget.CheckUpdates(
+            fontsize = 15,
             distro = "Ubuntu",
             display_format = "{updates} Updates",
             colour_have_updates=colors["red"],
@@ -117,11 +136,10 @@ def init_bar_widgets(primary=True):
         widget.Spacer(
             length = 16,
         ),
-        widget.Image(
-
-            filename  = '~/.config/qtile/assets/bar/vol.png',
-            margin    = 8,
-            size      = 50,
+        widget.TextBox(
+            text = '墳 ',
+            fontsize = 20,
+            foreground  = colors["blue"],
         ),
         widget.PulseVolume(
             font        = "JetBrainsMono Nerd Font, Regular",
@@ -129,11 +147,21 @@ def init_bar_widgets(primary=True):
             fontsize    = 15,
             padding     = 0,
         ),
+# Doesn't work  if there is no batt
+#        widget.Image(
+#            filename  = '~/.config/qtile/assets/bar/bat.png',
+#            margin    = 7
+#        ),         
+#        widget.Battery(format=' {percent:2.0%}',
+#            foreground  = colors["red"],
+#            fontsize    = 12,
+#            padding     = 0,
+#        ),  
         widget.Spacer(
             length = 30,
         ),
         widget.Spacer(
-            length      =10,
+            length      = 10,
         ), 
 # Systray actually on this line
         widget.TextBox(
@@ -143,9 +171,11 @@ def init_bar_widgets(primary=True):
             foreground=colors["surface2"],
             fontsize= 25,
         ),
-        widget.Image(
-            filename         = '~/.config/qtile/assets/bar/power.png',
-            margin           = 8,
+        widget.TextBox(
+            text = " ",
+            margin = 8,
+            foreground=colors["red"],
+            fontsize= 20,
             mouse_callbacks  = {
                 'Button1': lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
             }

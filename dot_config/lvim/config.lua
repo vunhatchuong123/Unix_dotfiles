@@ -72,6 +72,10 @@ lvim.keys.normal_mode["x"] = "\"_x"
 lvim.keys.normal_mode["<C-_>"] = "<Plug>(comment_toggle_linewise_current)"
 lvim.keys.visual_mode["<C-_>"] = "<Plug>(comment_toggle_linewise_visual)"
 lvim.keys.normal_mode["<leader>u"] = ":UndotreeToggle<CR>"
+lvim.keys.normal_mode["<leader>so"] = ":SymbolsOutline<CR>"
+lvim.keys.normal_mode["<leader>a"] = "<cmd>lua require('harpoon.mark').add_file()<cr>"
+lvim.keys.normal_mode["<leader>a"] = "<cmd>lua require('harpoon.mark').add_file()<cr>"
+lvim.keys.normal_mode["<C-e>"] = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>"
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -121,6 +125,15 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.autopairs.active = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.project.active = false
+
+lvim.builtin.indentlines.options.char_highlight_list = {
+  "IndentBlanklineIndent1",
+  "IndentBlanklineIndent2",
+  "IndentBlanklineIndent3",
+  "IndentBlanklineIndent4",
+  "IndentBlanklineIndent5",
+  "IndentBlanklineIndent6",
+}
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -291,6 +304,9 @@ lvim.plugins = {
   },
   {
     "mbbill/undotree",
+  },
+  {
+    "ThePrimeagen/harpoon",
   }
 }
 
@@ -314,4 +330,19 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
     vim.cmd "normal zR"
   end,
 })
-
+vim.autocommands = {
+  {
+    { "ColorScheme" },
+    {
+      pattern = "*",
+      callback = function()
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+      end,
+    },
+  },
+}

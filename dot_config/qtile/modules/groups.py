@@ -10,9 +10,14 @@ groups = [
             matches = [Match(wm_class=["Alacritty"])],
             screen_affinity = 2,
           ),
-    Group("Code", layout="monadtall", label=" ",
+    Group("Code", layout="monadtall", label=" ",
             matches = [Match(wm_class=["code"])]),
-    Group("Files", layout="monadtall", label=" "),
+   # Group("Files", layout="monadtall", label=" "),
+    Group("Sketch", layout="monadtall", label=" ",
+            matches = [
+                Match(wm_class=["mypaint","gimp-2.10"])
+                ]
+         ),
     Group("Discord", layout="monadtall", label="ﭮ",
             matches = [Match(wm_class=["discord"])]),
     Group("System", layout="monadtall", label="  "),

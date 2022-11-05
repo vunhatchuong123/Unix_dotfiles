@@ -1,21 +1,36 @@
 #!/bin/bash
 
 msgTag="mediastate"
+icon_dir="$HOME/.config/dunst/icons"
 
-function send_notification() {
-  volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
-	dunstify -a "changevolume" -u low -h string:x-dunst-stack-tag:$msgTag -h int:value:"$volume" "Volume: ${volume}" -t 2000
+send_notification() {
+  volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master) | sed 's/%//')
+
+  if [ "$volume" = "0" ]; then
+    icon="$icon_dir/volume-off.svg"
+  elif [ "$volume" -lt "10" ]; then
+    icon="$icon_dir/volume-low.svg"
+  elif [ "$volume" -lt "30" ]; then
+    icon="$icon_dir/volume-low.svg"
+  elif [ "$volume" -lt "70" ]; then
+    icon="$icon_dir/volume-medium.svg"
+  else
+    icon="$icon_dir/volume-high.svg"
+	fi
+
+	dunstify -a "changevolume" -u low -h string:x-dunst-stack-tag:$msgTag -h int:value:"$volume" "Volume: ${volume}%" -i $icon -t 2000
 }
+
 
 case $1 in
 up)
 	# Set the volume on (if it was muted)
   amixer -D default sset Master 2%+ unmute
-	send_notification $1
+	send_notification
 	;;
 down)
   amixer -D default sset Master 2%- unmute
-	send_notification $1
+	send_notification
 	;;
 mute)
   amixer -q set Master toggle

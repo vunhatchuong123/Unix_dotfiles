@@ -61,8 +61,8 @@
           "active_page": -1
         }
       ],
-      "w": 239,
-      "h": 911
+      "w": 25,
+      "h": 935
     },
     "right_sidebar": {
       "groups": [
@@ -71,12 +71,12 @@
           "active_page": -1
         }
       ],
-      "w": 245,
-      "h": 911
+      "w": 25,
+      "h": 935
     },
     "floating": [],
     "position": {
-      "x": 8,
+      "x": 2568,
       "y": 43,
       "w": 1896,
       "h": 1021
@@ -106,7 +106,13 @@
     "XP-PEN G430S Pen Pen (0):pen:3": {},
     "PixArt Dell MS116 USB Optical Mouse:mouse:4": {},
     "Logitech USB Keyboard:mouse:4": {},
-    "Virtual core XTEST pointer:mouse:2": {}
+    "Virtual core XTEST pointer:mouse:2": {},
+    "Logitech USB Receiver Keyboard:mouse:4": {},
+    "Logitech USB Receiver:mouse:4": {},
+    "qmkbuilder DOIO Consumer Control:mouse:4": {},
+    "qmkbuilder DOIO Mouse:mouse:4": {},
+    "JosefAdamcik Sofle Mouse:mouse:4": {},
+    "JosefAdamcik Sofle Consumer Control:mouse:4": {}
   },
   "colors.current": "#fb00ff",
   "colors.palette": {
