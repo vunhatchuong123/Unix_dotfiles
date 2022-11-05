@@ -38,9 +38,15 @@ def init_bar_widgets(primary=True):
             margin=7,
             fontsize=35,
         ),
-        widget.Spacer(
-            length = 20,
-        ),
+        widget.TextBox(
+            text = "",
+            padding = 8,
+            foreground=colors["surface2"],
+            fontsize=25,
+            ),
+       # widget.Spacer(
+       #     length = 20,
+       # ),
         widget.GroupBox(
             fontsize                    = 25,
             margin_y                    = 3,
@@ -57,14 +63,13 @@ def init_bar_widgets(primary=True):
             this_current_screen_border=colors["lavender"],
             other_current_screen_border=colors["blue"],
         ),
-        widget.Sep(
-            linewidth=0,
-            padding=2,
-            background=colors["sapphire"]
+        widget.TextBox(
+            text = "",
+            offset = 4,
+            padding = 4,
+            foreground=colors["surface2"],
+            fontsize= 25,
         ),
-        widget.Spacer(
-            length = 10,
-        ), 
         widget.CurrentLayoutIcon(
            padding = 0,
            scale = 0.7,
@@ -131,9 +136,13 @@ def init_bar_widgets(primary=True):
             length      =10,
         ), 
 # Systray actually on this line
-        widget.Spacer(
-            length = 10,
-        ),  
+        widget.TextBox(
+            text = "",
+            offset = 4,
+            padding = 4,
+            foreground=colors["surface2"],
+            fontsize= 25,
+        ),
         widget.Image(
             filename         = '~/.config/qtile/assets/bar/power.png',
             margin           = 8,
