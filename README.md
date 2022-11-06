@@ -50,6 +50,7 @@ Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) 
 | fd               | Better find cmd        | fd-find as app            |
 | ibus-bamboo      | Write in Vietnames     | Required Ibus             |
 | sxhkd            | Keyboard shorcuts      |                           |
+| kami             | Anime, Light novel     |                           |
 
 ## Theme
 

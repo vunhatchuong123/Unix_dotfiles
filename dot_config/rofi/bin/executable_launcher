@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+rofi \
+	-show drun \
+	-modi run,drun,window \
+	-drun-display-format "{icon} {name}" \
+	-terminal alacritty \
+	-kb-cancel Alt-F1 \
+  -sidebar-mode: true \
+	-theme "$HOME"/.config/rofi/config/launcher.rasi

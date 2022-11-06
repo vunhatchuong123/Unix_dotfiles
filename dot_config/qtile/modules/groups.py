@@ -13,6 +13,7 @@ groups = [
     Group("Code", layout="monadtall", label=" ",
             matches = [Match(wm_class=["code"])]),
    # Group("Files", layout="monadtall", label=" "),
+
     Group("Sketch", layout="monadtall", label=" ",
             matches = [
                 Match(wm_class=["mypaint","gimp-2.10"])
@@ -20,5 +21,7 @@ groups = [
          ),
     Group("Discord", layout="monadtall", label="ﭮ",
             matches = [Match(wm_class=["discord"])]),
+    Group("Game", layout="fullscreen", label=" ",
+            matches = [Match(wm_class=["Steam"])]),
     Group("System", layout="monadtall", label="  "),
 ]

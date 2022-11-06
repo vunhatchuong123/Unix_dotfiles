@@ -177,7 +177,7 @@ def init_bar_widgets(primary=True):
             foreground=colors["red"],
             fontsize= 20,
             mouse_callbacks  = {
-                'Button1': lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
+                'Button1': lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/bin/powermenu'))
             }
         ),
         widget.Spacer(

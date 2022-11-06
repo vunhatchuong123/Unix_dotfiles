@@ -50,7 +50,7 @@
     progress_bar_min_width = 150
 
     # Set the maximum width for the progress bar
-    progress_bar_max_width = 300
+    progress_bar_max_width = 200
 
 
     scale = 0
@@ -59,7 +59,7 @@
     separator_height = 2
     padding = 8
     horizontal_padding = 8
-    frame_width = 2
+    frame_width = 3
     frame_color = "#96CDFB"
 
     # Define a color for the separator.
@@ -80,7 +80,7 @@
     # section for how to disable this if necessary
     idle_threshold = 120
 
-    font = JetBrainsMono Nerd Font 12 
+    font = JetBrainsMono Nerd Font 15 w 
     line_height = 0
 
     markup = full
@@ -105,7 +105,7 @@
 
     ### Icons ###
     icon_position = left
-    max_icon_size = 90
+    max_icon_size = 96
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/candy-icons
