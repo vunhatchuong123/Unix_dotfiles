@@ -80,7 +80,7 @@
     # section for how to disable this if necessary
     idle_threshold = 120
 
-    font = JetBrainsMono Nerd Font 15 w 
+    font = JetBrainsMono Nerd Font 15
     line_height = 0
 
     markup = full
