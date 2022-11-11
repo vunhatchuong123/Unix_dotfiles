@@ -9,6 +9,16 @@ xrandr --output HDMI-0 --mode 1920x1080 --right-of DP-4
 setxkbmap -option ctrl:nocaps
 #setxkbmap -option "caps:none"
 
+# Environment variables set everywhere
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+
+# XDG Paths
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
 # Move zsh to .config
 export ZDOTDIR=$HOME/.config/zsh
 

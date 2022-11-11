@@ -4,13 +4,15 @@
 #
 
 # Color ls, required exa plugin
-alias exa="exa --color=auto --time-style=long-iso"
+alias exa="exa --color=auto --icons --time-style=long-iso"
 alias ls="exa"
 alias la="ls --long --all --header --icons"
 #alias lg="ls --long --all --header --icons --git"
+alias tree="exa --tree --level=2 --group-directories-first"
+
 alias fd="fdfind"
 alias less="less -R"
-
+#alias anaconda="source $HOME/.config/zsh/conda.zsh"
 alias cz="chezmoi"
 alias lg="lazygit"
 alias gitui="gitui -t mocha.ron"
@@ -18,7 +20,11 @@ alias gitui="gitui -t mocha.ron"
 alias bat="batcat"
 alias cat="bat"
 
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
 alias nvimrc='nvim ~/.config/nvim/'
 
 # Colorize grep output (good for log files)

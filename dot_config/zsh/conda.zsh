@@ -1,19 +1,3 @@
-#!/bin/bash
-
-export XDG_CONFIG_HOME=$HOME/.config
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# FZF Catppuccin theme
-export FZF_DEFAULT_OPTS=" \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-
-# Start starship prompt and zoxide
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$("$HOME/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
