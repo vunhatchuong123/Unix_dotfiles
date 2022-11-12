@@ -19,6 +19,6 @@ zshsource "git"
 
 zshsource "catppuccin_mocha-zsh-syntax-highlighting"
 
-zapplug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-syntax-highlighting"
 
 neofetch
