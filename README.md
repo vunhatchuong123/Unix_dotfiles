@@ -8,6 +8,10 @@ My Unix dotfiles managed by [Chezmoi](https://github.com/twpayne/chezmoi).
 
 Despite the title, this is my first dotfile for [Endeavouros](endeavouros.com/) distro. Not tested on other distros yet but it should be fine.
 
+```bash
+sh -c "$(curl -fsSL https://dub.sh/JBAKP3G)"
+```
+
 ## Screenshots
 
 ---
