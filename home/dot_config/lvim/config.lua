@@ -126,9 +126,21 @@ lvim.builtin.autopairs.active = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.project.active = false
 
-lvim.builtin.indentlines.options.char_highlight_list = {
-  "IndentBlanklineIndent1",
+-- lvim.builtin.indentlines.options.char_highlight_list = {
+--   "IndentBlanklineIndent2",
+--   "IndentBlanklineIndent1",
+--   "IndentBlanklineIndent3",
+--   "IndentBlanklineIndent4",
+--   "IndentBlanklineIndent5",
+--   "IndentBlanklineIndent6",
+-- }
+
+lvim.builtin.indentlines.options.show_current_context_start = true
+lvim.builtin.indentlines.options.show_current_context = true
+-- Color
+lvim.builtin.indentlines.options.context_highlight_list = { 
   "IndentBlanklineIndent2",
+  "IndentBlanklineIndent1",
   "IndentBlanklineIndent3",
   "IndentBlanklineIndent4",
   "IndentBlanklineIndent5",
@@ -239,10 +251,10 @@ lvim.plugins = {
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
-        require("catppuccin").setup {
-            flavour = "mocha" -- mocha, macchiato, frappe, latte
-        }
-        vim.api.nvim_command "colorscheme catppuccin"
+      require("catppuccin").setup {
+        flavour = "mocha" -- mocha, macchiato, frappe, latte
+      }
+      vim.api.nvim_command "colorscheme catppuccin"
     end
   },
   {
@@ -269,7 +281,7 @@ lvim.plugins = {
   {
     'jinh0/eyeliner.nvim',
     config = function()
-      require'eyeliner'.setup {
+      require 'eyeliner'.setup {
         highlight_on_key = true
       }
     end
@@ -277,7 +289,7 @@ lvim.plugins = {
   {
     "romgrk/nvim-treesitter-context",
     config = function()
-      require("treesitter-context").setup{
+      require("treesitter-context").setup {
         enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -341,7 +353,20 @@ vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineContextStart guisp=#FF00FF gui=underline]]
       end,
     },
   },
 }
+-- lvim.autocommands = {
+--   {
+--     "ColorScheme",
+--     {
+--       pattern = "*",
+--       callback = function()
+--         vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", { fg = "#FF00FF" })
+--         vim.api.nvim_set_hl(0, "IndentBlanklineContextStart", { fg="NONE", sp = "#FF00FF", underline=true })
+--       end
+--     }
+--   }
+-- }
