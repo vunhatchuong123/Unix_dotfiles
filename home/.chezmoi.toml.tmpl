@@ -1,0 +1,11 @@
+{{- /* Template file for chezmoi config file */ -}}
+{{ $qtile := promptString "Qtile(true/false)" }}{{/* true if this machine is using qtile */}}
+
+
+[edit]
+    command = "nvim"
+[merge]
+    command = "nvim"
+    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
+[data]
+    qtile = {{ $qtile | quote }}
