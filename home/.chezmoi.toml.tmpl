@@ -1,12 +1,9 @@
 {{- /* Template file for chezmoi config file */ -}}
-{{- $qtile := promptString "Qtile(true/false)" -}}{{/* true if this machine is using qtile */}}
-{{- $docker := false -}}{{/* true if this machine should have Docker installed */}}
-
+{{ $qtile := promptString "Qtile(true,false)" -}}
 [edit]
     command = "nvim"
 [merge]
     command = "nvim"
     args = ["-d", "{{ "{{ .Destination }}" }}", "{{ "{{ .Source }}" }}", "{{ "{{ .Target }}" }}"]
 [data]
-    qtile = {{ $qtile | quote }}
-    docker = {{ $docker }}
+    qtile = {{ $qtile }}
