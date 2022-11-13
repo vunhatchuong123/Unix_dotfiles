@@ -1,6 +1,7 @@
-{{- if (and (eq .chezmoi.os "linux") (not .qtile)) }}
+{{ if not .qtile }}
 .config/rofi
 .config/qtile
 .config/dunst
 .config/picom
-{{- end }}
+{{ end }}
+
