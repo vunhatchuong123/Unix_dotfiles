@@ -13,3 +13,5 @@ sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
 
 # Install packages
 sudo apt install -y $(awk '/^[^{]/ {print $0}' < ~/.dotfiles/home/.chezmoitemplates/packages.list)
+
+{{ end -}}
