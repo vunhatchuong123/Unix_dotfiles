@@ -1,6 +1,21 @@
 {{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "debian" "ubuntu" "pop" )) -}}
 
-curl
-git
+zsh
+ranger
+htop
+flameshot
+mypaint
+zathura
+timeshift
+mpv
+virtualbox
+python3-pip
+python3-venv
+
+{{ if .qtile }}
+
+nitrogen
+
+{{ end -}}
 
 {{ end -}}

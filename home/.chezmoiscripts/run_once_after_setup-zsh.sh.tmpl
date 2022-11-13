@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo -e "\033[0;32m>>>>> Setting Up ZSH <<<<<\033[0m"
+
+if [ ! "$(command -v zsh)" ]; then
+  echo "Installing Zsh"
+  sudo apt install zsh
+fi
+
+chsh -s $(which zsh)
+
+echo -e "\033[0;32m>>>>> Finish Setting Up ZSH <<<<<\033[0m"
