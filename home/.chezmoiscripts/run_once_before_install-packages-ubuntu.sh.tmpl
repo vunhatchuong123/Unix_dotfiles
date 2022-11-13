@@ -12,4 +12,4 @@ sudo bash -c "$(curl -fsSL https://git.io/JsADh || wget -q https://git.io/JsADh 
 sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
 
 # Install packages
-sudo apt install -y $(awk '/^[^{]/ {print $0}' < ~/.dotfiles/home/.chezmoiscript/packages.list.tmpl)
+sudo apt install -y $(awk '/^[^{]/ {print $0}' < ~/.dotfiles/home/.chezmoitemplates/packages.list)
