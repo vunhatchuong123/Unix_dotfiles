@@ -17,7 +17,6 @@ alias cz="chezmoi"
 alias lg="lazygit"
 alias gitui="gitui -t mocha.ron"
 
-alias bat="batcat"
 alias cat="bat"
 
 alias -g ...='../..'

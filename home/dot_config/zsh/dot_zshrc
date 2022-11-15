@@ -14,11 +14,13 @@ plug "zap-zsh/vim"
 plug "zap-zsh/fzf"
 plug "zap-zsh/exa"
 plug "esc/conda-zsh-completion"
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 zshsource "git"
 
 zshsource "catppuccin_mocha-zsh-syntax-highlighting"
 
 plug "zsh-users/zsh-syntax-highlighting"
+zshsource "conda"
 
 neofetch

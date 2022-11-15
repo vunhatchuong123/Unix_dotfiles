@@ -13,7 +13,6 @@ setopt share_history          # share command history data
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/miniconda3/bin:$PATH"
 
 VIM="nvim"
 
