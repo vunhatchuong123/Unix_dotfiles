@@ -111,6 +111,7 @@ def init_bar_widgets(primary=True):
           fontsize = 15,
           format = ' {f} GB  ',
           partition = '/',
+          mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('bleachbit')},
           visible_on_warn = False,
           warn_color = colors["red"],
         ),
