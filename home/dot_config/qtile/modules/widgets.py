@@ -11,7 +11,7 @@ colors = colors.catppuccin()
 
 # Widget configuration
 widget_defaults = dict(
-    font="JetBrainsMono Nerd Font",
+    font="JetBrainsMono Nerd Font, Medium",
     fontsize=18,
     padding=6,
     bacground=colors["crust"],
@@ -52,7 +52,6 @@ def init_bar_widgets(primary=True):
             margin_y                    = 3,
             margin_x                    = 5,
             borderwidth                 = 2,
-            font                        = "JetBrainsMono Nerd Font, Regular",
             active                      = colors["green"],
             block_highlight_text_color  = colors["red"],
             inactive                    = colors["sapphire"],
@@ -98,7 +97,6 @@ def init_bar_widgets(primary=True):
         # ----------------------------------------
 
         widget.Clock(
-            font        = "JetBrainsMono Nerd Font, Regular",
             format="%A %d-%m-%Y %H:%M",
             fontsize = 15,
         ),
@@ -143,7 +141,6 @@ def init_bar_widgets(primary=True):
             foreground  = colors["blue"],
         ),
         widget.PulseVolume(
-            font        = "JetBrainsMono Nerd Font, Regular",
             foreground  = colors["blue"],
             fontsize    = 15,
             padding     = 0,

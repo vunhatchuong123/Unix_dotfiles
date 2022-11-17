@@ -55,6 +55,7 @@ sh -c "$(curl -fsSL https://dub.sh/JBAKP3G)"
 | ibus-bamboo      | Write in Vietnames     | Required Ibus             |
 | sxhkd            | Keyboard shorcuts      |                           |
 | kami             | Anime, Light novel     |                           |
+| duf              | Better df              |                           |
 
 ## Theme
 
