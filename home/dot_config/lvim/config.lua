@@ -138,7 +138,7 @@ lvim.builtin.project.active = false
 lvim.builtin.indentlines.options.show_current_context_start = true
 lvim.builtin.indentlines.options.show_current_context = true
 -- Color
-lvim.builtin.indentlines.options.context_highlight_list = { 
+lvim.builtin.indentlines.options.context_highlight_list = {
   "IndentBlanklineIndent2",
   "IndentBlanklineIndent1",
   "IndentBlanklineIndent3",
@@ -226,7 +226,15 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "flake8", filetypes = { "python" } },
+  {
+    command = "flake8",
+
+    extra_args = { "--max-line-length = 88",
+    "--ignore=E203"},
+
+    filetypes = { "python" },
+
+  },
   {
     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "shellcheck",
@@ -347,13 +355,13 @@ lvim.autocommands = {
     {
       pattern = "*",
       callback = function()
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineContextStart guisp=#FF00FF gui=underline]]
+        vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
+        vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
+        vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
+        vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
+        vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
+        vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+        vim.cmd [[highlight IndentBlanklineContextStart guisp=#C678DD  gui=underline]]
       end,
     },
   },
