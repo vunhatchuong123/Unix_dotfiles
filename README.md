@@ -56,6 +56,10 @@ sh -c "$(curl -fsSL https://dub.sh/JBAKP3G)"
 | sxhkd            | Keyboard shorcuts      |                           |
 | kami             | Anime, Light novel     |                           |
 | duf              | Better df              |                           |
+| newsboat         | RSS Feed viewer        | lynx                      |
+| neomutt          | Mail client            |                           |
+| youtube-viewer   | View yt vids term      |                           |
+| urlscan
 
 ## Theme
 

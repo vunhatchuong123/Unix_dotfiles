@@ -48,6 +48,12 @@ groups.append(ScratchPad("scratchpad", [
 #
     #DropDown("volume", "pavucontrol", width=0.8, height=0.8, x=0.1, y=0.1, opacity=0.9),
 
+    DropDown("newsboat",
+             terminal + " -e newsboat",
+             height=height,
+             y=y_position,
+             opacity=opacity),
+
 ]))
 
 keys.extend([
@@ -56,6 +62,7 @@ keys.extend([
     Key([mod], "i", lazy.group['scratchpad'].dropdown_toggle('chezmoi')),
     Key([mod], "c", lazy.group['scratchpad'].dropdown_toggle('ranger')),
     Key([mod, "shift"], "k", lazy.group['scratchpad'].dropdown_toggle('kami')),
+    Key([mod], "b", lazy.group['scratchpad'].dropdown_toggle('newsboat')),
 
 ])
 

@@ -1,0 +1,20 @@
+"query:Tech:tags # \"Tech\""
+https://archlinux.org/feeds/news/ "Tech"
+https://news.ycombinator.com/rss "Tech"
+https://hnrss.org/best "Tech"
+
+
+"query:Reddit:tags # \"Reddit\""
+https://www.reddit.com/r/archlinux/new.rss "Reddit"
+https://www.reddit.com/r/linux/new.rss "Reddit"
+https://www.reddit.com/r/unixporn/new.rss "Reddit"
+
+"query:Twitter:tags # \"Twitter\""
+https://nitter.net/realGeorgeHotz/rss "Twitter"
+
+
+"query:YouTube:tags # \"YouTube\""
+https://www.youtube.com/feeds/videos.xml?channel_id=UC554eY5jNUfDq3yDOJYirOQ "YouTube" "~Destiny" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS97tchJDq17Qms3cux8wcA  "YouTube" "~Chris@machine" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UClFSU9_bUb4Rc6OYfTt5SPw  "YouTube" "~Philip Defranco" 
+
