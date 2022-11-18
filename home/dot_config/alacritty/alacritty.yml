@@ -6,6 +6,9 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
+env:
+  TERM: xterm-256color
+
 import:
   - ~/.config/alacritty/themes/catppuccin-mocha.yml
 
