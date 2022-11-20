@@ -17,7 +17,7 @@ https://blog.system76.com/rss "Linux"
 
 "query:Reddit:tags # \"Reddit\""
 #https://www.reddit.com/r/archlinux.rss "Reddit"
-https://www.reddit.com/r/linux.rss "Reddit"
+#https://www.reddit.com/r/linux.rss "Reddit"
 https://www.reddit.com/r/unixporn.rss "Reddit"
 https://www.reddit.com/r/Destiny.rss "Reddit"
 

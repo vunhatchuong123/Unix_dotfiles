@@ -3,9 +3,9 @@ include ~/.config/newsboat/dark
 auto-reload yes
 refresh-on-startup yes
 cleanup-on-quit yes
-notify-always yes
+#notify-always yes
 notify-format "Newsboat: %f unread feeds (%n unread articles total)"
-notify-program notify-send
+notify-program dunstify
 show-read-feeds no
 show-read-articles no
 reload-time 30

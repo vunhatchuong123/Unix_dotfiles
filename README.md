@@ -59,7 +59,8 @@ sh -c "$(curl -fsSL https://dub.sh/JBAKP3G)"
 | newsboat         | RSS Feed viewer        | lynx                      |
 | neomutt          | Mail client            |                           |
 | youtube-viewer   | View yt vids term      |                           |
-| urlscan
+| urlscan          |                        | Help newsboat             |
+| curlie           | curl wrapper           |                           |
 
 ## Theme
 
