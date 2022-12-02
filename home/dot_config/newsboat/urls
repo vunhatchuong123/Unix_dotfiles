@@ -18,15 +18,19 @@ https://blog.system76.com/rss "Linux"
 "query:Reddit:tags # \"Reddit\""
 #https://www.reddit.com/r/archlinux.rss "Reddit"
 #https://www.reddit.com/r/linux.rss "Reddit"
-https://www.reddit.com/r/unixporn.rss "Reddit"
-https://www.reddit.com/r/Destiny.rss "Reddit"
+#https://www.reddit.com/r/unixporn.rss "Reddit"
+#https://www.reddit.com/r/Destiny.rss "Reddit"
 
 "query:Twitter:tags # \"Twitter\""
-https://nitter.net/realGeorgeHotz/rss "Twitter"
+#https://nitter.net/realGeorgeHotz/rss "Twitter"
 
+
+"query:Podcast:tags # \"Podcast\""
+https://talkpython.fm/subscribe/rss "Podcasts" "Python"
+https://pythonbytes.fm/subscribe/rss "Podcasts" "Python"
 
 "query:YouTube:tags # \"YouTube\""
-https://www.youtube.com/feeds/videos.xml?channel_id=UC554eY5jNUfDq3yDOJYirOQ "YouTube" "~Destiny" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCS97tchJDq17Qms3cux8wcA  "YouTube" "~Chris@machine" 
-https://www.youtube.com/feeds/videos.xml?channel_id=UClFSU9_bUb4Rc6OYfTt5SPw  "YouTube" "~Philip Defranco" 
+#https://www.youtube.com/feeds/videos.xml?channel_id=UC554eY5jNUfDq3yDOJYirOQ "YouTube" "~Destiny" 
+#https://www.youtube.com/feeds/videos.xml?channel_id=UCS97tchJDq17Qms3cux8wcA  "YouTube" "~Chris@machine" 
+#https://www.youtube.com/feeds/videos.xml?channel_id=UClFSU9_bUb4Rc6OYfTt5SPw  "YouTube" "~Philip Defranco" 
 
