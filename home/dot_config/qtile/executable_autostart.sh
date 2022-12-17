@@ -22,3 +22,4 @@ imwheel -b "4 5"
 
 # Keyboard shortcuts
 sxhkd &
+

@@ -25,4 +25,3 @@ export ZDOTDIR=$HOME/.config/zsh
 # Start ibus to change keyboard language
 ibus-daemon -drxR
 
-xmodmap ~/.Xmodmap

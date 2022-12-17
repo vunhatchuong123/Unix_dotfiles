@@ -248,7 +248,7 @@ linters.setup {
     filetypes = { "javascript", "python" },
   },
 }
-lvim.lsp.override = { "dart" }
+
 -- Additional Plugins
 lvim.plugins = {
   {
@@ -326,34 +326,7 @@ lvim.plugins = {
   },
   {
     "ThePrimeagen/harpoon",
-  },
-  {
-    "akinsho/flutter-tools.nvim",
-    config = function()
-      require("flutter-tools").setup({
-
-        -- flutter_path = "~/Android/flutter/bin",
-        debugger = {
-          enabled = true,
-          -- run_via_dap = true,
-        },
-        outline = { auto_open = false },
-        decorations = {
-          statusline = { device = true, app_version = true },
-        },
-        -- widget_guides = { enabled = true, debug = true },
-        -- lsp = {
-        --   color = {
-        --     enabled = true,
-        --     background = true,
-        --     virtual_text = false,
-        --   },
-        --   on_attach = require("lsp").common_on_attach,
-        -- },
-      })
-    end,
-    -- ft = "dart",
-  },
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
