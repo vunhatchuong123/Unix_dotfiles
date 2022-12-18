@@ -1,7 +1,7 @@
 local options = {
   clipboard = "unnamedplus", -- allows neovim to access the system clipboard
   hidden = true, -- required to keep multiple buffers and open multiple buffers
-  -- guicursor = "",
+  guicursor = "",
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   hlsearch = false, -- Default | highlight all matches on previous search pattern
   incsearch = true, -- Makes search act like search in modern browsers
@@ -13,7 +13,6 @@ local options = {
   inccommand = "split",
 
   -- SYSTEM --
-  -- shell = "powershell.exe",
   updatetime = 50, -- faster completion (4000ms default)
   swapfile = false, -- Don't create a swapfile
   backup = false, -- Default | creates a backup file
@@ -25,6 +24,7 @@ local options = {
 
   -- APPEARANCE --
   termguicolors = true, -- set term gui colors (most terminals support this)
+  cursorline = true, -- highlight the current line
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
   colorcolumn = "80",
   cmdheight = 1, -- more space in the neovim command line for displaying messages
@@ -33,9 +33,8 @@ local options = {
   sidescrolloff = 8, -- minimal number of screen lines to keep left and right of the cursor.Only available with wrap off
   number = true, -- set numbered lines
   relativenumber = true, -- set relative numbered lines
-  showmode = false,
+  showmode = true,
   -- showcmd = false, -- Show what you type
-
 
   -- INDENT --
   breakindent = true,
@@ -51,8 +50,8 @@ local options = {
   softtabstop = 2,
   shiftwidth = 2, -- the number of spaces inserted for each indentation
   tabstop = 2, -- insert 4 spaces for a tab
-  --foldmethod = "expr",
-  --foldexpr = "nvim_treesitter#foldexpr()",
+  foldmethod = "manual", -- folding set to "expr" for treesitter based folding
+  foldexpr = "", -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
   foldlevelstart = 99,
 
 }
@@ -65,8 +64,6 @@ vim.opt.fillchars:append {
   -- foldclose = "",
   stl = ' ',
 }
--- vim.g.loaded_netrw = 1 -- Disable netrw
--- vim.g.loaded_netrwPlugin = 1
 
 -- EXECUTE --
 for k, v in pairs(options) do
