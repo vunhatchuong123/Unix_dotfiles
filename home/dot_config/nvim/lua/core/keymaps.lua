@@ -21,9 +21,13 @@ vim.g.maplocalleader = " "
 -- Normal --
 
 keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<S-x>", "<cmd>BufferKill<CR>", opts)
+keymap("n", "<S-x>", ":bd<CR>", opts)
 keymap("n", "c"    , "\"_c", opts)
 keymap("n", "x"    , "\"_x", opts)
+
+-- Centers cursor when moving 1/2 page down
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -73,25 +77,3 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
-
--- Plugins --
--- Telescope --
--- keymap("n", "<leader>ff",":Telescope find_files<CR>", opts)
--- keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
--- keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
--- keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
-
--- Nvim Tree --
--- keymap("n", "<leader>e",":NvimTreeToggle<cr>", opts)
-
--- keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
--- keymap("n", "<leader>g","<cmd>lua _lazygit_toggle()<cr>", opts)
-
-
--- keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
-
--- Comment --
---- bind Ctrl+/
--- keymap("n", "<C-_>",'<Plug>(comment_toggle_linewise_current)', opts)
--- keymap("v", "<C-_>", "<Plug>(comment_toggle_linewise_visual)", opts)
